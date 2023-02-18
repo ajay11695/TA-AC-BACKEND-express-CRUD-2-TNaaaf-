@@ -5,7 +5,7 @@ Q. write express generator command with varying options to generate express app 
     express --ejs app1
     ```
   . no views for express application
-     ```
+    ```
     express --no-view app2
     ```
   . express app with gitignore
