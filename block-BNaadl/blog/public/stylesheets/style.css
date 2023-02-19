@@ -1,0 +1,88 @@
+body{
+  background-color: rgb(211, 224, 235);
+}
+
+header{
+  background-color: rgb(244, 237, 229);
+  margin: 0;
+  padding: 0 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.container1{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.textalign{
+  text-align: center;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn,.submit{
+  background-color: aquamarine;
+  color: black;
+  padding: 8px 20px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+form{
+  padding: 20px;
+  box-shadow: 0px 0px 10px white;
+  background-color: white;
+  margin-top: 50px;
+}
+
+.formInput{
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+textarea{
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+ 
+span{
+  color: red;
+  background-color: aqua;
+  padding: 5px 15px;
+}
+
+.btn-like{
+  background-color: black;
+  color: white;
+}
+
+.btn-delete{
+  background-color: red;
+}
+
+.h-t2{
+  color: rgb(5, 101, 74);
+}
+
+.h-title{
+  color: cornflowerblue;
+}

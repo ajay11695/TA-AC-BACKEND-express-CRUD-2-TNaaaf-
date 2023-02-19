@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <header>
+        <div class="flex">
+          <a href="/">
+          <h1>Home</h1>
+          </a>
+          <a class="btn" href="/articles">Back</a>
+          </div>
+      </header>
+    <div class="container">
+       
+        <div>
+            <h1 class="h-t2"><%= articleDetail.title %></h1>
+            <h3><%= articleDetail.author %></h3>
+
+            <% articleDetail.tags.forEach(tag=>{ %>
+                <span><%= tag %></span>
+             <% }) %>
+           
+            <p><%= articleDetail.description %></p>
+            <h4><%= articleDetail.likes ? articleDetail.likes:0 %></h4>
+
+            <div style="margin:0px 0px 30px 0px;">
+            <a class="btn btn-like" href="/articles/<%= articleDetail._id %>/likes">likes</a>
+            </div>            
+            <a class="btn" href="/articles/<%= articleDetail._id %>/edit">Edit</a>
+            <a class="btn btn-delete" href="/articles/<%= articleDetail._id %>/delete">Delete</a>
+        </div>
+    </div>
+</body>
+</html>
