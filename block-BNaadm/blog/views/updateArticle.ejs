@@ -1,0 +1,20 @@
+
+
+      <%- include('partials/header') -%>
+
+    <h1 class="textalign">update Article</h1>
+   <div class="container1">
+    <form action="/articles/<%= article._id %>" method="POST">
+        <input class="formInput" type="text" name="title" placeholder="Enter title" value="<%= article.title %>">
+        <!-- <input class="formInput" type="text" name="description" placeholder="Enter description" value="<%= article.description %>"> -->
+         <textarea  name="description" id="" cols="" rows="6" placeholder="add description"><%= article.description %></textarea>
+        <input class="formInput" type="text" name="tags" placeholder="Enter tags"  value="<%= article.tags %>">
+        <input class="formInput" type="text" name="author" placeholder="Enter author"  value="<%= article.author %>">
+        <input class="formInput" type="number" name="likes" placeholder="Enter likes"  value="<%= article.likes %>">
+        <div class="textalign">
+        <input class="submit" type="submit" value="update article">
+        </div>
+    </form>
+   </div>
+
+   <%- include('partials/footer') -%>

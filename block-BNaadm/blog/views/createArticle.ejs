@@ -1,0 +1,17 @@
+
+      <%- include('partials/header') -%>
+
+    <h1 class="textalign">Add Article</h1>
+   <div class="container1">
+    <form action="/articles" method="POST">
+        <input class="formInput" type="text" name="title" placeholder="Enter title">
+        <textarea  name="description" id="" cols="" rows="6" placeholder="add description"></textarea>
+        <input class="formInput" type="text" name="tags" placeholder="Enter tags">
+        <input class="formInput" type="text" name="author" placeholder="Enter author">
+        <input class="formInput" type="number" name="likes" placeholder="Enter likes">
+        <div class="textalign">
+        <input class="submit" type="submit" name="" value="add article">
+        </div>
+    </form>
+   </div>    
+   <%- include('partials/footer') -%>
