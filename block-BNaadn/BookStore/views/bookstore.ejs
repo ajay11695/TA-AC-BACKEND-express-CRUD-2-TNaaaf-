@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> bookStore </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+       <div class="flex">
+        <a class="btn" href="/"><h1 class="">Home</h1></a>
+        <a class="btn" href="/books/new">Add book</a>
+        <a class="btn" href="/books">Back</a>
+        <form action="/books/search" method="POST">
+          <input class="search-bar padding-l" type="text" placeholder="Enter bookname..." name="book">
+          <input type="submit" value="Search">
+        </form>
+       </div>
+    </header>
+
+    <% if(books.length){ %>
+    
+
+    <form action="/books/category" method="POST" class="textalign top-20">
+      <select name="category" id="" class="search padding-l">
+        <option value="Miction">Fiction</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Technology">Technology</option>
+        <option value="Motivation">Motivation</option>
+      </select>
+      <input type="submit" value="searched">
+    </form>
+     
+
+      <div class="flex wrap">
+        <% books.forEach(book=>{ %>
+          
+         <div class="textalign top-20 book-div">
+          <figure><img src="/images/<%=book.cover_image %>" alt="<%= book.title %>"></figure>
+          <h2 class="title f-weight"><%= book.title %></h2>
+          <h3 class="author f-weight"><%= book.authorName %></h3>
+          <a class="btn top-2" href="/books/<%= book._id %>">Show</a>
+         </div>
+
+       <% }) %>
+      </div>
+      <% }else{ %>
+        <div class="textalign">
+        <h1 class="top-50">No Book Found</h1>
+        <a class="btn btn-b" href="/books/">Back</a>
+        </div>
+        <% } %>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> bookStore </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+       <div class="flex">
+        <a class="btn" href="/"><h1 class="">Home</h1></a>
+        <a class="btn" href="/books"><h1 class="">Back</h1></a>
+        <a class="btn" href="/books/new">Add book</a>
+       </div>
+    </header>
+      <div class="container">
+        
+          
+         <div class=" top-20">
+          <figure><img src="/images/<%=book.cover_image%>" alt="<%= book.title %>"></figure>
+          <h2 class="title f-weight"><%= book.title %></h2>
+          <small class="author f-weight blue">By: <%= book.authorName %> (</small>
+          <small class="author f-weight"><%= book.authorId.email %>, </small>
+          <small class="author f-weight"><%= book.authorId.country %>)</small>
+          <h2 class="font-20 f-weight red">Publiser by:<%= book.publication %></h2>
+
+         <div>
+            
+            <% book.categories.forEach(category=>{ %>
+
+                <span><%= category %></span>
+                <% }) %>
+            </div>
+          <h2 class=" f-weight ">Pages:<%= book.pages %></h2>
+
+            <p><small class="red font-20">About the book:-</small><br><%= book.summary %></p>
+        
+          <a class="btn  btn-b" href="/books/<%= book._id %>/edit">Edit</a>
+          <a class="btn  btn-b" href="/books/<%= book._id %>/delete">Delete</a>
+          
+         </div>
+
+     
+      </div>
+  </body>
+</html>
